@@ -21,6 +21,21 @@ public class SceneEvents : MonoBehaviour
         "I would recommend you keep the UP key, as you have to use it for using the level-clear flag."
     };
 
+    private static readonly string[] L2_STRING = {
+        "This place is asking you to sacrifice two keys, wow!",
+        "I will recommend here that you sacrifice JUMP and LEFT, as you cannot get through the rabbit without running.",
+        "Don't forget that the rabbit is completely harmless when the carrot is still in his hands! You can pass through him without jumping."
+    };
+
+    private static readonly string[] L3_STRING = {
+        "This scene appears quit messy, huh? So I will put it straightforward.",
+        "Put the run key in the red area. After the green field fills this scene, you jump onto your up key in the green field.",
+        "On the platform above, turn off the switch and get your up key back, then use it to press the button above.",
+        "After these, the door will open. You can get down and enter the door.",
+        "You can get your UP key back using the switch beside the flag.",
+        "You will be a really hardcore player if you can solve this puzzle!"
+    };
+
     public int code = 0;
 
     private void TutorialSetHint(int index)
@@ -39,6 +54,12 @@ public class SceneEvents : MonoBehaviour
                     break;
                 case 2:
                     GameManager.instance.levelHint = L1_STRING;
+                    break;
+                case 3:
+                    GameManager.instance.levelHint = L2_STRING;
+                    break;
+                case 4:
+                    GameManager.instance.levelHint = L3_STRING;
                     break;
             }
         }

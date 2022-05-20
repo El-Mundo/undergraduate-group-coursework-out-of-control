@@ -5,6 +5,7 @@ using UnityEngine;
 public class SwitchBehaviour : MonoBehaviour
 {
     public int index;
+    [SerializeField]
     private bool isOn = false;
     SpriteRenderer sprite;
     public Sprite on, off;
@@ -13,6 +14,8 @@ public class SwitchBehaviour : MonoBehaviour
     private void Start()
     {
         sprite = GetComponent<SpriteRenderer>();
+        sprite.sprite = isOn ? on : off;
+        GameManager.instance.SetSceneBool(index, isOn);
     }
 
     private void OnTriggerEnter2D(Collider2D collision)

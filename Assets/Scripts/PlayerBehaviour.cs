@@ -1,4 +1,4 @@
-﻿using System.Collections;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using Assets.Scripts;
@@ -85,7 +85,7 @@ public class PlayerBehaviour : MonoBehaviour
         {
             //float vx = rbody.velocity.x;
             //rbody.velocity = new Vector2(Mathf.MoveTowards(vx, 0, shiftVelocity), rbody.velocity.y);
-            xMov = Mathf.MoveTowards(xMov, 0, shiftVelocity);
+            xMov = Mathf.MoveTowards(xMov, 0, shiftVelocity * Time.deltaTime * 120);
         }
         //bool walking = Mathf.Abs(rbody.velocity.x) > VEL_DEAD_ZONE;
         bool walking = Mathf.Abs(xMov) > VEL_DEAD_ZONE;

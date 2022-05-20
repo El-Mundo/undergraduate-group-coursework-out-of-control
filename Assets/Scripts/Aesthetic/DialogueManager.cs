@@ -1,4 +1,4 @@
-﻿using System.Collections;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
@@ -161,7 +161,7 @@ public class DialogueManager : MonoBehaviour
     /// </summary>
     public void StartDialog(string[] _contents)
     {
-        if (speaking) return;
+        if (speaking || GameManager.instance.state != 0) return;
 
         speaking = true;
         l = 0;

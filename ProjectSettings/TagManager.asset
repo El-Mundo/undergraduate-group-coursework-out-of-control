@@ -8,6 +8,7 @@ TagManager:
   - Moving
   - Grass
   - Wood
+  - Electricity
   layers:
   - Default
   - TransparentFX

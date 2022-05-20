@@ -12,7 +12,10 @@ public class GravityMachineBehaviour : MonoBehaviour
     private void Start()
     {
         if (index >= 0)
+        { 
             isOn = GameManager.instance.GetSceneBool(index);
+            gravityAnimator.SetBool("on", isOn);
+        }
         else
             gravityAnimator.SetBool("on", true);
     }

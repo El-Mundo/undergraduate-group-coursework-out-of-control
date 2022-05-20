@@ -12,7 +12,7 @@ public class DraggableUI : MonoBehaviour, IDragHandler, IEndDragHandler
     private Collider2D thisCollider;
     private Rigidbody2D thisBody;
     public bool instantiated = false;
-    private bool collided = false, inGravity = false;
+    private bool collided = false, inGravity = false, inElectricity = false;
     private Vector2 startPos, instantiatedPos;
     private Transform startParent;
     [SerializeField]
@@ -22,7 +22,7 @@ public class DraggableUI : MonoBehaviour, IDragHandler, IEndDragHandler
     [SerializeField]
     private Text text;
 
-    public bool moving = false;
+    public bool moving = false, electroed = false;
 
     public string keyName;
 
@@ -40,7 +40,7 @@ public class DraggableUI : MonoBehaviour, IDragHandler, IEndDragHandler
 
     public void OnDrag(PointerEventData eventData)
     {
-        if (moving) return;
+        if (moving || electroed) return;
 
         Ray ray = Camera.main.ScreenPointToRay(eventData.position);
         Vector3 rayPoint = ray.GetPoint(Vector3.Distance(transform.position, Camera.main.transform.position));
@@ -75,7 +75,7 @@ public class DraggableUI : MonoBehaviour, IDragHandler, IEndDragHandler
 
     public void OnEndDrag(PointerEventData eventData)
     {
-        if (moving) return;
+        if (moving || electroed) return;
 
         if (CanInstantiate())
         {
@@ -115,41 +115,60 @@ public class DraggableUI : MonoBehaviour, IDragHandler, IEndDragHandler
     private void Update()
     {
         moving = false;
+        electroed = false;
 
         if (instantiated)
         {
-            if (inGravity && thisBody.simulated)
+            if(keyName == "Jump" || keyName == "Run")
             {
-                
-                if(keyName == "Right") {
-                    thisBody.velocity = new Vector2(VELOCITY, 0);
-                    moving = true;
-                }
-                else if(keyName == "Left")
-                {
-                    thisBody.velocity = new Vector2(-VELOCITY, 0);
-                    moving = true;
-                }
-                else if(keyName == "Up")
-                {
-                    thisBody.velocity = new Vector2(0, VELOCITY);
-                    moving = true;
-                }
-            }
-            else
-            {
-                thisBody.velocity = new Vector2(0, 0);
-            }
+                electroed = (inElectricity && thisBody.simulated);
 
-            if (moving)
-            {
-                img.color = Color.green;
-                tag = "Moving";
+                if (electroed)
+                {
+                    img.color = Color.red;
+                    tag = "Moving";
+                }
+                else
+                {
+                    img.color = Color.white;
+                    tag = "Wood";
+                }
             }
-            else
+            else 
             {
-                img.color = Color.white;
-                tag = "Wood";
+                if (inGravity && thisBody.simulated)
+                {
+                
+                    if(keyName == "Right") {
+                        thisBody.velocity = new Vector2(VELOCITY, 0);
+                        moving = true;
+                    }
+                    else if(keyName == "Left")
+                    {
+                        thisBody.velocity = new Vector2(-VELOCITY, 0);
+                        moving = true;
+                    }
+                    else if(keyName == "Up")
+                    {
+                        thisBody.velocity = new Vector2(0, VELOCITY);
+                        moving = true;
+                    }
+                }
+                else
+                {
+                    thisBody.velocity = new Vector2(0, 0);
+                }
+
+                if (moving)
+                {
+                    img.color = Color.green;
+                    tag = "Moving";
+                }
+                else
+                {
+                    img.color = Color.white;
+                    tag = "Wood";
+                }
             }
         }
     }
@@ -164,6 +183,10 @@ public class DraggableUI : MonoBehaviour, IDragHandler, IEndDragHandler
         {
             inGravity = true;
         }
+        else if (collision.CompareTag("Electricity"))
+        {
+            inElectricity = true;
+        }
     }
 
     private void OnTriggerExit2D(Collider2D collision)
@@ -175,6 +198,10 @@ public class DraggableUI : MonoBehaviour, IDragHandler, IEndDragHandler
         else if (collision.CompareTag("Gravity"))
         {
             inGravity = false;
+        }
+        else if (collision.CompareTag("Electricity"))
+        {
+            inElectricity = false;
         }
     }
 

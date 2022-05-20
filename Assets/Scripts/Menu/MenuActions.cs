@@ -1,4 +1,4 @@
-﻿using System.Collections;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
@@ -50,7 +50,7 @@ public class MenuActions : MonoBehaviour
                 res3.isOn = false;
                 break;
             case 2:
-                Screen.SetResolution(960, 720, GameManager.fullscreen);
+                Screen.SetResolution(960, 540, GameManager.fullscreen);
                 res3.isOn = true;
                 res1.isOn = false;
                 res2.isOn = false;
@@ -170,7 +170,7 @@ public class MenuActions : MonoBehaviour
                 res3.isOn = false;
                 break;
             case 2:
-                Screen.SetResolution(960, 720, GameManager.fullscreen);
+                Screen.SetResolution(960, 540, GameManager.fullscreen);
                 res3.isOn = true;
                 res1.isOn = false;
                 res2.isOn = false;
