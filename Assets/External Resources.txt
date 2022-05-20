@@ -1,0 +1,24 @@
+======================= AUDIO =======================
+Mario's Picross BGM, used in the DEBUG level
+https://www.zophar.net/music/nintendo-snes-spc/mario-no-super-picross
+Astro Boy voice, used for the playable character
+https://www.sounds-resource.com/nintendo_switch/crystalcrisis/sound/27496/
+Super Princess Peach BGMs, used in game leves
+https://downloads.khinsider.com/game-soundtracks/album/super-princess-peach
+
+Dialogue SFX, used in dialogue boxes
+https://www.aigei.com/s?q=%E6%8E%A5%E6%94%B6%E6%B6%88%E6%81%AF2&type=sound
+Minecraft SFX, used for footsteps and tip sound
+https://www.sounds-resource.com/pc_computer/minecraft/sound/6210/
+Door's opening SFX, used for in-scene doors
+https://www.aigei.com/s?q=%E7%A0%96%E7%9F%B3%E7%BB%93%E6%9E%84%E6%9C%BA%E5%85%B3%EF%BC%8D%E5%BC%80&type=sound_lib
+
+======================= PLUGIN =======================
+Universal RP from Unity Package Manager, for 2D lighting
+2D Animation from Unity Package Manager, for 2D bone-based animating
+
+======================= FONT =======================
+LCD font for UI dialogue
+https://www.fontspace.com/digital-7-font-f7087
+Hand written font for in-scene guidelines
+https://www.fontspace.com/hello-ketta-font-f41129
