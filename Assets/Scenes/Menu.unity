@@ -543,8 +543,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 210.8, y: -31}
-  m_SizeDelta: {x: 216.41138, y: 50.226967}
+  m_AnchoredPosition: {x: 145.08, y: -31}
+  m_SizeDelta: {x: 106.882324, y: 50.226967}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &96983638
 MonoBehaviour:
@@ -886,7 +886,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 2
+  m_Text: 3
 --- !u!222 &141292734
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -965,7 +965,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 3
+  m_Text: 4
 --- !u!222 &169164278
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -4375,7 +4375,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1053158102}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 8.893854, y: -0.9, z: 0}
+  m_LocalPosition: {x: 8.892128, y: -0.9, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1282092689}
@@ -4791,7 +4791,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Tutorial
+  m_Text: 1
 --- !u!222 &1241819944
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -5528,8 +5528,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 71, y: -31}
-  m_SizeDelta: {x: 216.41138, y: 50.226967}
+  m_AnchoredPosition: {x: 10.577, y: -31}
+  m_SizeDelta: {x: 115.70566, y: 50.226967}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1493128262
 MonoBehaviour:
@@ -5625,8 +5625,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -84.2, y: -31}
-  m_SizeDelta: {x: 215.92, y: 50.226967}
+  m_AnchoredPosition: {x: -136.29, y: -31}
+  m_SizeDelta: {x: 129.09807, y: 50.226967}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1514494785
 MonoBehaviour:
@@ -6122,7 +6122,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 4
+  m_Text: 5
 --- !u!222 &1534845577
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -7130,7 +7130,7 @@ GameObject:
   - component: {fileID: 1797537374}
   - component: {fileID: 1797537373}
   m_Layer: 0
-  m_Name: 109 Mario Puzzle 3
+  m_Name: Music
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -7146,7 +7146,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 70ba03dd90c9d1045ac1e70a416db62e, type: 3}
+  m_audioClip: {fileID: 8300000, guid: bfeeee9949d0b22488342e3b7f8ff0e0, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 1
   m_Pitch: 1
@@ -7355,7 +7355,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 1
+  m_Text: 2
 --- !u!222 &1806101357
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -7501,7 +7501,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 6
+  m_Text: 7
 --- !u!222 &1841390137
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -8921,7 +8921,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 5
+  m_Text: 6
 --- !u!222 &2129609624
 CanvasRenderer:
   m_ObjectHideFlags: 0

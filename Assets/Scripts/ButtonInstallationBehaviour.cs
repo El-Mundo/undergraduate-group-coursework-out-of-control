@@ -4,12 +4,12 @@ using UnityEngine;
 
 public class ButtonInstallationBehaviour : MonoBehaviour
 {
-    private readonly static float DEFAULT_COL_OFFSET_Y = -0.4580388F,
-        PRESSED_COL_OFFSET_Y = -0.7F, COL_OFFSET_X = -0.006636798F;
+    /*private readonly static float DEFAULT_COL_OFFSET_Y = -0.4580388F,
+        PRESSED_COL_OFFSET_Y = -0.7F, COL_OFFSET_X = -0.006636798F;*/
 
     public int index;
-    private bool isOn = false;
-    SpriteRenderer sprite;
+    protected bool isOn = false;
+    protected SpriteRenderer sprite;
     public Sprite on, off;
     public AudioClip clip;
 

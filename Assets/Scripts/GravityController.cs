@@ -4,22 +4,22 @@ using UnityEngine;
 
 public class GravityController : MonoBehaviour
 {
-    private Collider2D collider;
+    private Collider2D col;
 
     void Start()
     {
-        collider = GetComponent<Collider2D>();
+        col = GetComponent<Collider2D>();
     }
 
     void Update()
     {
         if (transform.localScale.y <= 0.02f)
         {
-            collider.enabled = false;
+            col.enabled = false;
         }
         else
         {
-            collider.enabled = true;
+            col.enabled = true;
         }
     }
 }

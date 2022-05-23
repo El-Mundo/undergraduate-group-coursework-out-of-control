@@ -70,7 +70,7 @@ public class DraggableUI : MonoBehaviour, IDragHandler, IEndDragHandler
 
     private bool CanInstantiate()
     {
-        return !BackPanelUI.instance.cursorInBackPanel && !collided;
+        return !BackPanelUI.instance.cursorInBackPanel && !collided && IsInCanvas(thisRect);
     }
 
     public void OnEndDrag(PointerEventData eventData)
@@ -203,6 +203,22 @@ public class DraggableUI : MonoBehaviour, IDragHandler, IEndDragHandler
         {
             inElectricity = false;
         }
+    }
+
+    //Referencing https://forum.unity.com/threads/test-if-ui-element-is-visible-on-screen.276549/
+    private static bool IsInCanvas(RectTransform rectTransform)
+    {
+        Rect screen = new Rect(0, 0, Screen.width, Screen.height);
+        Vector3[] corners= new Vector3[4];
+        rectTransform.GetWorldCorners(corners);
+        int detected = 0;
+        for (int i = 0; i < corners.Length; i++) 
+        {
+            Vector3 tar = Camera.main.WorldToScreenPoint(corners[i]);
+            if (screen.Contains(tar)) detected++;
+        }
+        Debug.Log(detected);
+        return detected >= 4;
     }
 
 }

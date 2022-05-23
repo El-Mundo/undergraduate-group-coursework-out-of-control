@@ -19,7 +19,7 @@ public class DoorInstallationBehaviour : MonoBehaviour
         {
             if(doorPos.y < doorOpenedPos.localPosition.y)
             {
-                door.localPosition += new Vector3(0, openSpeed, 0);
+                door.localPosition += new Vector3(0, openSpeed * Time.deltaTime * 240, 0);
                 if (!sound.isPlaying) sound.Play();
             }
         }
@@ -27,7 +27,7 @@ public class DoorInstallationBehaviour : MonoBehaviour
         {
             if (doorPos.y > doorClosedPos.localPosition.y)
             {
-                door.localPosition -= new Vector3(0, openSpeed, 0);
+                door.localPosition -= new Vector3(0, openSpeed * Time.deltaTime * 240, 0);
                 if (!sound.isPlaying) sound.Play();
             }
         }

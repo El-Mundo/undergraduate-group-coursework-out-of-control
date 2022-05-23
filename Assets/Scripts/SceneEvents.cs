@@ -1,4 +1,4 @@
-﻿using System.Collections;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -28,12 +28,46 @@ public class SceneEvents : MonoBehaviour
     };
 
     private static readonly string[] L3_STRING = {
-        "This scene appears quit messy, huh? So I will put it straightforward.",
+        "This scene appears quite messy, huh? So I will put it straightforward.",
         "Put the run key in the red area. After the green field fills this scene, you jump onto your up key in the green field.",
         "On the platform above, turn off the switch and get your up key back, then use it to press the button above.",
         "After these, the door will open. You can get down and enter the door.",
         "You can get your UP key back using the switch beside the flag.",
         "You will be a really hardcore player if you can solve this puzzle!"
+    };
+
+    private static readonly string[] L4_STRING = {
+        "To clear this area, you can put your run key beneath the purple area and push it into the red field with your up key.",
+        "You can manipulate your up key's movement with the button beside the machine. Don't forget to stop it timely!",
+        "Also, I would suggest that you do not retrieve your up key so quickly. You will see why on the platform above."
+    };
+
+    private static readonly string[] L4_STRING_1 = {
+        "This area is asking you to perform a run jump to get to the flag. That's why you should consider leave your up key in the area below.",
+        "You can start up the machine below again using the green button here. It will help you get your run key back."
+    };
+
+    private static readonly string[] L6_STRING = {
+        "Use your jump key here!",
+        "See? The rabbits on the right to the door will give you no chance if you cannot run!"
+    };
+
+    private static readonly string[] L6_STRING_1 = {
+        "You can put your run key in the red area to open the door.",
+        "But the key itself may block your way? Don't worry, sacrifice your right key to push yourself! It will also push the run key!",
+        "You will be OUT OF CONTROL after this puzzle~"
+    };
+
+    private static readonly string[] L6_STRING_2 = {
+        "You did it! Now you're completely OUT OF CONTROL after these puzzles!",
+        "Don't worry! You still have the UP key to clear this level."
+    };
+
+    private static readonly string[] L5_STRING = {
+        "Be careful! Don't fall into the large gap below!",
+        "You can repeatedly use two keys as step stones to traverse it.",
+        "For example, you first jump onto the left key, and then the up key.",
+        "After landing on the up key, you use the left key again as the next step stone."
     };
 
     public int code = 0;
@@ -60,6 +94,24 @@ public class SceneEvents : MonoBehaviour
                     break;
                 case 4:
                     GameManager.instance.levelHint = L3_STRING;
+                    break;
+                case 5:
+                    GameManager.instance.levelHint = L4_STRING;
+                    break;
+                case 6:
+                    GameManager.instance.levelHint = L4_STRING_1;
+                    break;
+                case 7:
+                    GameManager.instance.levelHint = L6_STRING;
+                    break;
+                case 8:
+                    GameManager.instance.levelHint = L6_STRING_1;
+                    break;
+                case 9:
+                    GameManager.instance.levelHint = L6_STRING_2;
+                    break;
+                case 10:
+                    GameManager.instance.levelHint = L5_STRING;
                     break;
             }
         }

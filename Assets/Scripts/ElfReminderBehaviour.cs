@@ -19,13 +19,13 @@ public class ElfReminderBehaviour : MonoBehaviour
     }
 
     // Update is called once per frame
-    void Update()
+    void FixedUpdate()
     {
         if (isFollowing) { 
             Vector3 thisPos = transform.position;
             Vector3 newPos = thisPos;
-            newPos.x = thisPos.x + (target.position.x - thisPos.x) * easing;
-            newPos.y = thisPos.y + (target.position.y - thisPos.y) * easing;
+            newPos.x = thisPos.x + (target.position.x - thisPos.x) * easing * 5;
+            newPos.y = thisPos.y + (target.position.y - thisPos.y) * easing * 5;
             transform.position = newPos;
         }
     }

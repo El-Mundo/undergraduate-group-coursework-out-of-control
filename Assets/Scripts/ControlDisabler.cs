@@ -44,7 +44,7 @@ namespace Assets.Scripts
             if (keysEnabled.ContainsKey(button))
             {
                 keysEnabled[button] = value;
-                UnityEngine.Debug.Log("KEY " + button + (value ? " ENABLED" : " DISABLED"));
+                //UnityEngine.Debug.Log("KEY " + button + (value ? " ENABLED" : " DISABLED"));
             }
         }
 
