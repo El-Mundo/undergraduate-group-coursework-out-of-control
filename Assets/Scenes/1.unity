@@ -896,6 +896,7 @@ MonoBehaviour:
   icon: {fileID: 0}
   text: {fileID: 1374263657}
   moving: 0
+  electroed: 0
   keyName: Jump
 --- !u!114 &106020222
 MonoBehaviour:
@@ -2581,6 +2582,7 @@ MonoBehaviour:
   icon: {fileID: 81401015}
   text: {fileID: 0}
   moving: 0
+  electroed: 0
   keyName: Left
 --- !u!114 &404782663
 MonoBehaviour:
@@ -3645,6 +3647,7 @@ MonoBehaviour:
   icon: {fileID: 0}
   text: {fileID: 1936589767}
   moving: 0
+  electroed: 0
   keyName: Run
 --- !u!114 &729958145
 MonoBehaviour:
@@ -16258,6 +16261,7 @@ MonoBehaviour:
   icon: {fileID: 37777090}
   text: {fileID: 0}
   moving: 0
+  electroed: 0
   keyName: Up
 --- !u!114 &1535211007
 MonoBehaviour:
@@ -18224,6 +18228,7 @@ MonoBehaviour:
   icon: {fileID: 193677983}
   text: {fileID: 0}
   moving: 0
+  electroed: 0
   keyName: Right
 --- !u!114 &1889602646
 MonoBehaviour:
@@ -19353,7 +19358,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: = Run
+  m_Text: = Move
 --- !u!222 &2089291774
 CanvasRenderer:
   m_ObjectHideFlags: 0
